@@ -1,7 +1,9 @@
-﻿using System;
-using System.Collections.Generic; // allows for using dictionaries and lists
+﻿// to run the file use `dotnet run`
+// to nodemon use `dotnet watch`
+// for gitignore use `dotnet new gitignore
 
-// to run the file use `dotnet run`
+using System;
+using System.Collections.Generic; // allows for using dictionaries and lists
 
 namespace CatWorx.BadgeMaker
 {
@@ -9,11 +11,19 @@ namespace CatWorx.BadgeMaker
     {
         static void Main(string[] args) // entry point
         {
-            List<string> employees = new List<string>() { "adam", "amy" };
-
-            employees.Add("barbara");
-            employees.Add("billy");
-
+            List<string> employees = new List<string>();
+            // Collect user values until the value is an empty string
+            while (true)
+            {
+                Console.WriteLine("Please enter a name: (leave empty to exit): ");
+                string input = Console.ReadLine() ?? "";
+                // Break if the user hits ENTER without typing a name
+                if (input == "")
+                {
+                    break;
+                }
+                employees.Add(input);
+            }
             for (int i = 0; i < employees.Count; i++)
             {
                 Console.WriteLine(employees[i]);
