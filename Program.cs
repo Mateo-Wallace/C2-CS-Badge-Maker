@@ -9,9 +9,10 @@ namespace CatWorx.BadgeMaker
 {
     class Program
     {
-        static List<string> GetEmployees()
+        // Update the method return type
+        static List<Employee> GetEmployees()
         {
-            List<string> employees = new List<string>();
+            List<Employee> employees = new List<Employee>();
             while (true)
             {
                 Console.WriteLine("Please enter a name: (leave empty to exit): ");
@@ -20,25 +21,26 @@ namespace CatWorx.BadgeMaker
                 {
                     break;
                 }
-
-                // Create a new Employee instance
                 Employee currentEmployee = new Employee(input, "Smith");
-                employees.Add(currentEmployee.GetFullName());
+                // Add currentEmployee, not a string
+                employees.Add(currentEmployee);
             }
             return employees;
         }
 
-        static void PrintEmployees(List<string> employees)
+        // Change the type of the employees parameter
+        static void PrintEmployees(List<Employee> employees)
         {
             for (int i = 0; i < employees.Count; i++)
             {
-                Console.WriteLine(employees[i]);
+                // each item in employees is now an Employee instance
+                Console.WriteLine(employees[i].GetFullName());
             }
         }
 
         static void Main(string[] args)
         {
-            List<string> employees = GetEmployees();
+            List<Employee> employees = GetEmployees();
             PrintEmployees(employees);
         }
     }
