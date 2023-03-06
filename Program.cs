@@ -15,16 +15,27 @@ namespace CatWorx.BadgeMaker
             List<Employee> employees = new List<Employee>();
             while (true)
             {
-                Console.WriteLine("Please enter a name: (leave empty to exit): ");
-                string input = Console.ReadLine() ?? "";
-                if (input == "")
+                // Move the initial prompt inside the loop, so it repeats for each employee
+                Console.WriteLine("Enter first name (leave empty to exit): ");
+
+                // change input to firstName
+                string firstName = Console.ReadLine() ?? "";
+                if (firstName == "")
                 {
                     break;
                 }
-                Employee currentEmployee = new Employee(input, "Smith");
-                // Add currentEmployee, not a string
+
+                // add a Console.ReadLine() for each value
+                Console.Write("Enter last name: ");
+                string lastName = Console.ReadLine() ?? "";
+                Console.Write("Enter ID: ");
+                int id = Int32.Parse(Console.ReadLine() ?? "");
+                Console.Write("Enter Photo URL:");
+                string photoUrl = Console.ReadLine() ?? "";
+                Employee currentEmployee = new Employee(firstName, lastName, id, photoUrl);
                 employees.Add(currentEmployee);
             }
+
             return employees;
         }
 
