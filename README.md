@@ -2,3 +2,5 @@
 C# practice.
 
 on top of lesson 3
+
+https://placekitten.com/300/300
