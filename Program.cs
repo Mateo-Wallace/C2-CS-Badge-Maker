@@ -1,11 +1,4 @@
-﻿// to run the file use `dotnet run`
-// to nodemon use `dotnet watch`
-// for gitignore use `dotnet new gitignore
-
-using System;
-using System.Collections.Generic; // allows for using dictionaries and lists
-
-namespace CatWorx.BadgeMaker
+﻿namespace CatWorx.BadgeMaker
 {
     class Program
     {
@@ -39,20 +32,10 @@ namespace CatWorx.BadgeMaker
             return employees;
         }
 
-        // Change the type of the employees parameter
-        static void PrintEmployees(List<Employee> employees)
-        {
-            for (int i = 0; i < employees.Count; i++)
-            {
-                string template = "{0,-10}\t{1,-20}\t{2}";
-                Console.WriteLine(String.Format(template, employees[i].GetId(), employees[i].GetFullName(), employees[i].GetPhotoUrl()));
-            }
-        }
-
         static void Main(string[] args)
         {
             List<Employee> employees = GetEmployees();
-            PrintEmployees(employees);
+            Util.PrintEmployees(employees);
         }
     }
 }
