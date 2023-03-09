@@ -25,6 +25,11 @@ namespace CatWorx.BadgeMaker
                 // If not, create it
                 Directory.CreateDirectory("data");
             }
+
+            using (StreamWriter file = new StreamWriter("data/employees.csv"))
+            {
+                file.WriteLine("ID,Name,PhotoUrl");
+            }
         }
     }
 }
