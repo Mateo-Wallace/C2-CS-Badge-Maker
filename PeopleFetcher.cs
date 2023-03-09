@@ -8,6 +8,12 @@ namespace CatWorx.BadgeMaker
 {
     class PeopleFetcher
     {
+        public static Boolean UseApiQuestion()
+        {
+            return false;
+        }
+
+
         // code from GetEmployees() in Program.cs
         public static List<Employee> GetEmployees()
         {
