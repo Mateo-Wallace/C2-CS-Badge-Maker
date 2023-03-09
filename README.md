@@ -49,11 +49,11 @@ From the terminal run `dotnet run` to begin the application.
 
 The gif below shows the functional app:
 
-![gif of application running in terminal]()
+![gif of application running in terminal](./img/workingApp.gif)
 
 The image below is an example output id:
 
-![id example output]()
+![id example output](./img/exampleBadge.png)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
