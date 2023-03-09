@@ -10,7 +10,10 @@ namespace CatWorx.BadgeMaker
     {
         public static Boolean UseApiQuestion()
         {
-            return false;
+            Console.Write("Would you like to auto generate ids? \nPlease enter true or false.");
+            bool autoGen = Convert.ToBoolean(Console.ReadLine());
+
+            return autoGen;
         }
 
 
