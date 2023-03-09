@@ -34,7 +34,8 @@ While building this project I learned to:
 
 1. Fork the repo
 1. Clone the code to your local machine
-1. Install C# packages using ??????
+1. Open in `VS Code`
+1. Use the `restore` command
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -46,7 +47,13 @@ From the terminal run `dotnet run` to begin the application.
 1. You will be asked to enter a first name, last name, id, and photo url. For the photo url feel free to use `https://placekitten.com/300/300` .
 1. Once you have finished entering one id you may either continue entering ids or simply hit enter with no input to finish. Ids will be generated and placed within the `data` folder.
 
+The gif below shows the functional app:
+
 ![gif of application running in terminal]()
+
+The image below is an example output id:
+
+![id example output]()
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
